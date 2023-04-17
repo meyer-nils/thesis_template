@@ -1,5 +1,6 @@
-# LaTeX template for a thesis at MRM Materials Engineering
+[![Latex](https://img.shields.io/badge/Made%20with-LaTeX-1f425f.svg)](https://en.wikipedia.org/wiki/LaTeX)
 
+# LaTeX template for a thesis at MRM Materials Engineering
 
 ## How to fill the template
 The template provides a basic structure for a thesis. Your edits will change primarily those fields, which are currently orange. 
