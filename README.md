@@ -3,7 +3,7 @@
 # LaTeX template for a thesis at MRM Materials Engineering
 
 ## How to fill the template
-The template provides a basic structure for a thesis. Your edits will change primarily those fields, which are currently orange. 
+The template provides a basic structure for a thesis. Your edits will change primarily those fields, which are currently orange. For more information on LaTeX, also take a look at the [MRM Hub](https://mrmhub.mrm.uni-augsburg.de/index.php?r=wiki%2Fpage%2Fview&title=LaTeX&cguid=1fab046e-9c7c-41f9-b982-a200c3f1c54a).
 
 You may start by adding the basic information to `templates/metadata.tex`. This includes the type of thesis, your address, your supervisor names, etc. You should replace all orange entries, for example `\textcolor{orange}{Thesis type}` with `Bachelor's thesis`.
 
