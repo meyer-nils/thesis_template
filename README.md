@@ -29,13 +29,13 @@ Then there are two options:
 ### Local computer 
 Create a fork for the thesis (project page -> fork -> own account) or simply download the template. 
 You may then compile the document on your local computer with 
-'''
+```
     latexmk -pdf thesis.tex
-'''
+```
 or 
-'''
+```
     latexmk -pdf expose.tex
-'''
+```
 
 This requires you to install LaTeX and the required packages on your local computer.
 
