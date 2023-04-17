@@ -1,0 +1,19 @@
+# Latex intermediate files
+*.acn
+*.acr
+*.alg
+*.aux
+*.fdb_latexmk
+*.fls
+*.glo
+*.log
+*.out
+*.syg
+*.bbl
+*.blg
+*.glg
+*.gls
+*.ist
+*.slg
+*.syi
+*.toc
