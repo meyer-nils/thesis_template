@@ -1,4 +1,3 @@
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Latex](https://img.shields.io/badge/Made%20with-LaTeX-1f425f.svg)](https://en.wikipedia.org/wiki/LaTeX)
 
 # LaTeX template for a thesis at MRM Materials Engineering
@@ -18,10 +17,11 @@ The number of pages refers to the main part (introduction to outlook). This mean
 Larger deviations from the guideline values should be avoided and discussed with the respective supervisor.
 The basic part should not exceed a quarter of the number of pages of the written version.
 
-|          | Pages (Introduction to conclusion) |
-| -------- | ---------------------------------- |
-| Bachelor | 40 - 60 Pages                      |
-| Master   | 80 - 120 Pages                     |
+|             | Pages (Introduction to conclusion) |
+| ----------- | ---------------------------------- |
+| Lab Project | 20 - 40 Pages                      |
+| Bachelor    | 40 - 60 Pages                      |
+| Master      | 80 - 100 Pages                     |
 
 ## Repository
 This repository includes the latest LaTex template for theses at the Chair of Materials Engineering. Students can be added as members of the repository (Settings -> Members) with guest privileges after logging in at least once at [git.rz-uni-augsburg.de](git.rz-uni-augsburg.de).
