@@ -41,4 +41,4 @@ or
 This requires you to install LaTeX and the required packages on your local computer.
 
 ### Overleaf
-You may also use the online editor [Overleaf](https://www.overleaf.com/) without installation on your machine. To do so, download the template and upload it to Overleaf as a new project (Overleaf -> New Project -> Upload Project).
+You may also use the online editor [Overleaf](https://www.overleaf.com/) without installation on your machine. To do so, download the template and upload it to Overleaf as a new project (Overleaf -> New Project -> Upload Project) or clone it directly from https://www.overleaf.com/read/pmhrbthfckqk. 
