@@ -21,61 +21,30 @@
 		{\large \Author}
 		\vspace{1cm}
 
-        \includegraphics[width=.8\textwidth]{\titleimage}%
-		
+        for obtaining the academic degree \emph{\Degree}\\ 
+        in the course \emph{\Program}.
+
 	\end{center}
+
+    \clearemptydoublepage
+    % Data
+	\pagestyle{title}
     \vfill
+    University of Augsburg\\ 
+    Faculty of Mathematics, Natural Sciences, and Materials Engineering\\
+    \Professorship \\
+    
 	\begin{tabularx}{\textwidth}{lXr}
-		Supervisor:         & \FirstSupervisor &\\ 
-        First reviewer:     & \FirstReviewer &\\
-        Second reviewer:    & \SecondReviewer 
+		Supervisor:         & \Supervisor &\\ 
+        First examiner:     & \FirstReviewer &\\
+        Second examiner:    & \SecondReviewer 
         & Augsburg, \SubmissionMonth\\
 		 \\
 	\end{tabularx}
 
-    % SIGNATURES
-   	\clearemptydoublepage
-	\pagestyle{title}
-	\vspace*{2cm}
-	\begin{center}
-		{\Large Author information\\}
-		\vspace{.2cm}
-
-		{\large \Author\\
-		Matr.-Nr.: \matrnr}
-		\vspace{.2cm}
-
-		\vfill
-
-		\small The thesis must be prepared in close cooperation with the supervisors and according to the requirements defined in \emph{Studien- und Prüfungsordnung} of your study program. Submitted copies remain in the possession of the Chair of Materials Engineering. 
-
-        The author declares to have prepared this thesis independently and only with the sources and aids indicated in the bibliography.
-
-		\vspace{.2cm}
-
-		\begin{tabular}[b]{p{2,25cm}p{3,75cm}p{1,8cm}p{2,25cm}p{3,75cm}}
-		Start date: & \Start & & End date: & \End \\
-		& & & & \\
-		Reviewers: & & & Supervisors: & \\
-		& & & & \\[16mm]
-		\cline{1-2} \cline{4-5}
-		\multicolumn{2}{c}{(\FirstReviewer)} & & \multicolumn{2}{c}{(\FirstSupervisor)} \\
-		& & & & \\[16mm]
-		\cline{1-2} \cline{4-5}
-		\multicolumn{2}{c}{(\SecondReviewer)} & & \multicolumn{2}{c}{(\SecondSupervisor)} \\
-		& & & & \\
-		Author:  & & & Address:& \\
-		& & &\ \ \ City & \City \\
-		& & &\ \ \ Street & \Street\\
-		& & &\ \ \ Phone & \Phone\\[3mm]
-		\cline{1-2}
-		\multicolumn{2}{c}{(\Author)} & & & \\
-		\end{tabular}
-	\end{center}
-
-    % TASK
+    % DECLARATIOn
 	\clearemptydoublepage
-	\include{templates/task}
+	\include{templates/declaration}
 
     % ACKNOWLEDGMENTS
 	\clearemptydoublepage
@@ -85,6 +54,11 @@
     \pagestyle{preamble}
 	\clearemptydoublepage
     \include{templates/abstract}
+
+    % GRAPHICAL ABSTRACT
+    \pagestyle{preamble}
+	\clearemptydoublepage
+    \include{templates/graphical_abstract}
 
     
     % TABLE OF CONTENTS
@@ -113,6 +87,9 @@
 	\include{chapters/04_results}
 	\clearemptydoublepage
 	\include{chapters/05_conclusion}
+
+    \clearemptydoublepage
+	\include{chapters/example}
 
     % APPENDIX
 	\clearemptydoublepage

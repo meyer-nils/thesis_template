@@ -20,8 +20,8 @@ The basic part should not exceed a quarter of the number of pages of the written
 |             | Pages (Introduction to conclusion) |
 | ----------- | ---------------------------------- |
 | Lab Project | 20 - 40 Pages                      |
-| Bachelor    | 40 - 60 Pages                      |
-| Master      | 80 - 100 Pages                     |
+| Bachelor    | 40 - 70 Pages                      |
+| Master      | 70 - 100 Pages                     |
 
 ## Repository
 This repository includes the latest LaTex template for theses at the Chair of Materials Engineering. Students can be added as members of the repository (Settings -> Members) with guest privileges after logging in at least once at [git.rz-uni-augsburg.de](git.rz-uni-augsburg.de).

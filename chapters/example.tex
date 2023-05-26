@@ -1,0 +1,154 @@
+\chapter*{Example chapter}
+{
+    \color{orange}
+    
+    \section*{Citations}
+    This chapter will make use of many citations, hence some notes on citing are summarized here. 
+    There are two options to cite in \LaTeX:
+    
+    \begin{enumerate}
+    	\item The command \verb!\cite{key}! creates an automatically updated reference number, such as in this example: \emph{This is a sample citation \cite{Einstein1905}}.
+    	\item The command \verb!\citet{key}! adds the author name, such as in this example: \emph{\citet{Einstein1905} wrote an important paper}. One author or two authors should be explicitly named, more authors are denoted \emph{Einstein et al. }. The command \verb!\citet{key}! takes care of this automatically.
+    \end{enumerate}
+
+    The keys and bibliographic data for the citations are listed in the file \texttt{literature.bib}. This can be created manually using the \emph{BibTex} format or by any literature management software. Usage of such a literature management software (e.g. Citavi, Mendely, ResearchRabbit, or Endnote) is highly recommended.
+    The bibliography should contain just references, which are actually used and referred to. In the default configuration of this template, the template takes care of this automatically. 
+
+    Images, tables, technical specifications, etc. have to be cited as well. Adaptions of a figure from literature should be indicated as well, e.g. by writing \emph{adapted from ...}.
+
+    \section*{Language and style}
+    A scientific thesis requires concise and precise language. Using past tense is reasonable in this section, as other people may have contributed to the state of research in the past, but apart from this, present tense should be used throughout the work.
+    Expressions like \emph{high temperature}, \emph{good rheology} or every-day language should be avoided.
+
+    Use sections and subsections reasonable and consistent. It should not be too granular and subsections do not make any sense, if there is not at least one other subsection at the same level. It is an important task of a student thesis to find a good structure and should be discussed in close coordination with supervisors.
+
+    \section*{Figures}
+    This chapter will probably make use of several figures, e.g. showing experimental setups or sketches. The subsequent code showcases insertion of an image, where the expression \emph{path} should be replaced with the actual path to your image. 
+    
+    \begin{Verbatim}
+        \begin{figure}[ht]
+            \centering
+            \includegraphics[width=0.75\textwidth]{path}
+            \caption{A caption describing the image.}
+            \label{fig:image_label_a}
+        \end{figure}
+    \end{Verbatim}
+    
+    This sample code results in the image shown in Figure \ref{fig:image_label_a}. Please note that references to figures are capitalized, e.g. \verb!Figure \ref{fig:image_label_a}!. Every image must be referenced in the text, there is no point having an image that is never mentioned in the text. Preferable, you should refer to the image before it appears in the document.
+    
+    \begin{figure}[ht]
+        \centering
+        \includegraphics[width=0.75\textwidth]{example-image-a}
+        \caption{
+            A caption describing the image. The caption should stand on its own and include a reference, if the image is adapted from another author. 
+        }
+        \label{fig:image_label_a}
+    \end{figure}
+
+    Make sure that the image is readable, i.e. features are large enough and the image quality is high. For pictures, use \texttt{JPEG} format, for diagrams and sketches use \texttt{PNG} format and for diagrams its best to use \texttt{PDF} format for optimal trade-offs between file size and quality. For diagrams, make sure to include axis labels with a sufficiently large font and use \emph{in <unit>} instead of rectangular brackets to indicate units. Make sure that colors are easy to distinguish, some background on colors may be found \href{here}{https://colorbrewer2.org} and \href{here}{https://bids.github.io/colormap/}. 
+
+    We may also combine multiple images, for example by the following code 
+    
+    \begin{verbatim}
+        \begin{figure}[ht]
+         \centering
+         \begin{subfigure}[b]{0.4\textwidth}
+             \centering
+             \includegraphics[width=\textwidth]{example-image-b}
+             \caption{Sample image B}
+             \label{fig:y equals x}
+         \end{subfigure}
+         \hfill
+         \begin{subfigure}[b]{0.4\textwidth}
+             \centering
+             \includegraphics[width=\textwidth]{example-image-c}
+             \caption{Sample image B}
+             \label{fig:three sin x}
+         \end{subfigure}
+        \caption{Two images side by side}
+        \label{fig:two_figs}
+    \end{figure}
+    \end{verbatim}
+
+    which results in Figure \ref{fig:two_figs}. This is useful for similar images or images comparing similar information.
+
+    \begin{figure}[ht]
+         \centering
+         \begin{subfigure}[b]{0.4\textwidth}
+             \centering
+             \includegraphics[width=\textwidth]{example-image-b}
+             \caption{Sample image B}
+             \label{fig:y equals x}
+         \end{subfigure}
+         \hfill
+         \begin{subfigure}[b]{0.4\textwidth}
+             \centering
+             \includegraphics[width=\textwidth]{example-image-c}
+             \caption{Sample image B}
+             \label{fig:three sin x}
+         \end{subfigure}
+        \caption{Two images side by side}
+        \label{fig:two_figs}
+    \end{figure}
+
+    In diagrams with nominal features, i.e. they do not have a natural order such as \emph{bananas}, \emph{apples} and \emph{peaches}, bar charts should be used. Never interpolate such data with any lines. If data is obtained from experiments, information about scatter must be provided, e.g. with box plots showing percentiles or at least by providing a standard deviation for Gaussian processes.
+    
+    \section*{Tables}
+    Tables are included inside via the environment \verb|table|. There are several ways to create the actual table. The most common are the \verb|tabular*| and \verb|tabularx| environments. An example of a table can be found below in Table \ref{tab:exampletab}.
+    
+    \begin{table}[ht]
+        \color{orange}
+    	\centering
+    	\caption{Headline of the example table}
+    	\label{tab:exampletab}
+    	\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}*4r@{}}
+    		\toprule
+    		& \textbf{Thickness} & \textbf{Young's modulus} & \textbf{Strength} & \textbf{Density} \\
+    		& $ t $ in \si{\milli\meter} & $ E $  in \si{\giga\pascal} & $ R_m  $  in \si{\mega\pascal} & $ \varrho $ in \si{\kilo\gram \per\cubic\metre} \\
+    		\midrule
+    		Material 1    & 100.0 & 2000  & 1500 & 3.0 \\
+    		Material 2    & 2.0  & 3000&  880 & 55.0 \\
+    		Material 3    & 0.6  & 4 & 713 & 52.8\\
+    		\bottomrule
+    	\end{tabular*}
+    \end{table}
+
+    Tables must have headlines and must be referred to in the text. Numbers should be aligned to the right and vertical lines should be omitted.
+
+
+    \section*{Equations}
+    Important formulas should be inserted via the \verb|equation|  environment, which numbers them and offers the option to refer to equations via \verb|\eqref|. For example, the code 
+    
+    \begin{Verbatim}
+    	\begin{equation}
+                f(x)  = \sin \left(\frac{\sin(x)}{x} \right)
+    	        \label{eq:key}
+    	\end{equation}
+    \end{Verbatim}
+    
+    results in 
+    
+    \begin{equation}
+         f(x)  = \sin \left(\frac{\sin(x)}{x} \right).
+    \label{eq:key}
+    \end{equation}
+
+    Note that equations are part of the text and proper punctuation is needed. Specific operators and functions like $\ln$, $\cos$ and the $\textrm{d}$ in differentials should be non-italic. 
+
+    You may also use \verb|$ 1/x $| for short in-line equations in the text like $1/x$. This is a reference to Equation \ref{eq:key}. 
+
+    \section*{Units}
+    For dealing with dimensional values, the \texttt{siunitx} package is useful. In text or math mode a value can be assigned a unit with the following syntax:
+    
+    \begin{Verbatim}
+    	\SI{value}{units}
+    \end{Verbatim}
+    
+    An example is 
+    
+    \begin{Verbatim}
+    	\SI{2.0}{\micro\gram\per\cubic\metre}
+    \end{Verbatim}
+
+    resulting in the expression \SI{2.0}{\micro\gram\per\cubic\metre}. The package takes care of proper spacing between numbers and units as well as line breaks.
+}
