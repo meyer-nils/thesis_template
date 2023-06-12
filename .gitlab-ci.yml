@@ -1,10 +1,21 @@
-compile:
+compile_thesis:
   stage: build
   image: arkark/latexmk:full
   script:
-    - echo "Compiling LaTeX with TexLive."
     - rm /root/.latexmkrc
     - latexmk -pdf thesis.tex
+  tags:
+    - latex
+  artifacts:
+    paths:
+      - ./*.pdf
+
+compile_expose:
+  stage: build
+  image: arkark/latexmk:full
+  script:
+    - rm /root/.latexmkrc
+    - latexmk -pdf expose.tex
   tags:
     - latex
   artifacts:
