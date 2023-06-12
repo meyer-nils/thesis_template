@@ -3,3 +3,5 @@ compile:
   script:
     - echo "Compiling LaTeX with TexLive."
     - latexmk -pdf main.tex
+  tags:
+    - latex
