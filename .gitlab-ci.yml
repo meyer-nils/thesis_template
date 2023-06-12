@@ -9,6 +9,7 @@ compile_thesis:
   artifacts:
     paths:
       - ./*.pdf
+    expire_in: 2 years
 
 compile_expose:
   stage: build
@@ -21,3 +22,4 @@ compile_expose:
   artifacts:
     paths:
       - ./*.pdf
+    expire_in: 2 years
