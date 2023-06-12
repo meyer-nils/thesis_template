@@ -24,7 +24,14 @@ The basic part should not exceed a quarter of the number of pages of the written
 | Master      | 50 - 80 Pages                      |
 
 ## Repository
-This repository includes the latest LaTex template for theses at the Chair of Materials Engineering. Students can be added as members of the repository (Settings -> Members) with guest privileges after logging in at least once at [git.rz-uni-augsburg.de](git.rz-uni-augsburg.de).
+This repository includes the latest LaTex template for theses at the Chair of Materials Engineering. It is automtically build to PDF after each commit and the PDFs may be found here:
+
+[Download "thesis.pdf"](https://git.rz.uni-augsburg.de/api/v4/projects/7022/jobs/artifacts/main/raw/thesis.pdf?job=compile_thesis)
+
+[Download "expose.pdf"](https://git.rz.uni-augsburg.de/api/v4/projects/7022/jobs/artifacts/main/raw/expose.pdf?job=compile_expose)
+
+
+Students can be added as members of the repository (Settings -> Members) with guest privileges after logging in at least once at [git.rz-uni-augsburg.de](git.rz-uni-augsburg.de).
 Then there are two options:
 
 ### Local computer 
