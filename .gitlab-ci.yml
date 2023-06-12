@@ -3,6 +3,9 @@ compile:
   image: arkark/latexmk:full
   script:
     - echo "Compiling LaTeX with TexLive."
-    - latexmk -pdf thesis.tex
+    - mkdir pdf
+    - mkdir pdf/chapters
+    - mkdir pdf/templates
+    - latexmk -pdf thesis.tex -output-directory=./pdf
   tags:
     - latex
