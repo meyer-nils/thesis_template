@@ -3,7 +3,7 @@ compile:
   image: arkark/latexmk:full
   script:
     - echo "Compiling LaTeX with TexLive."
-    - whoami
+    - "ls -la"
     - sudo latexmk -pdf thesis.tex
   tags:
     - latex
