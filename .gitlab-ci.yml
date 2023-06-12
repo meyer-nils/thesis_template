@@ -3,6 +3,6 @@ compile:
   image: arkark/latexmk
   script:
     - echo "Compiling LaTeX with TexLive."
-    - latexmk -pdf main.tex
+    - latexmk -pdf thesis.tex
   tags:
     - latex
