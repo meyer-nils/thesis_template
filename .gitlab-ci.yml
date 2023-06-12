@@ -1,0 +1,5 @@
+compile:
+  stage: build
+  script:
+    - echo "Compiling LaTeX with TexLive."
+    - latexmk -pdf main.tex
