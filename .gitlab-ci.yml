@@ -1,6 +1,6 @@
 compile:
   stage: build
-  image: arkark/latexmk
+  image: arkark/latexmk:full
   script:
     - echo "Compiling LaTeX with TexLive."
     - latexmk -pdf thesis.tex
