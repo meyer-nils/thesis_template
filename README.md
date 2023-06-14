@@ -1,4 +1,5 @@
 [![Latex](https://img.shields.io/badge/Made%20with-LaTeX-1f425f.svg)](https://en.wikipedia.org/wiki/LaTeX)
+![Pipeline](https://git.rz.uni-augsburg.de/mateng-m/thesis_template/badges/main/pipeline.svg)
 
 # Templates for theses at MRM Materials Engineering
 
