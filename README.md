@@ -20,9 +20,6 @@ The basic part should not exceed a quarter of the number of pages of the written
 | Master      | 50 - 80 Pages                      |
 
 
-# Microsoft Word
-The Microsoft Word template is named `thesis.docx`. You may download it from this repository.
-
 # LaTeX 
 
 ### How to fill the template
@@ -57,3 +54,6 @@ This requires you to install LaTeX and the required packages on your local compu
 
 ### Usage with Overleaf
 You may also use the online editor [Overleaf](https://www.overleaf.com/) without installation on your machine. To do so, download the template and upload it to Overleaf as a new project (Overleaf -> New Project -> Upload Project) or clone it directly from https://www.overleaf.com/read/pmhrbthfckqk. 
+
+# Microsoft Word
+The Microsoft Word template is named `thesis.docx`. You may download it from this repository.
