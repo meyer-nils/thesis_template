@@ -5,7 +5,7 @@
 There are Microsoft Word and LaTeX templates for theses in this repository. These are suggestions to help you writing your thesis at the MRM chair for Materials Engineering. 
 
 ## Adding students
-Students can be added as members of the repository (Settings -> Members) with guest privileges after logging in at least once at [https://git.rz.uni-augsburg.de/mateng-m/thesis_template](https://git.rz.uni-augsburg.de/mateng-m/thesis_template).
+Students can be added as members of the repository (Settings -> Members) with guest privileges after logging in at least once at [git.rz.uni-augsburg.de](https://git.rz.uni-augsburg.de).
 
 ## Length of the document
 Guidelines for the length of the written version of a Bachelor's or Master's thesis are listed in the table.
