@@ -319,11 +319,3 @@
 \usepackage{threeparttable,booktabs}
 \usepackage[section]{placeins}
 \usepackage{longtable}
-
-%% sorgt dafuer, dass Indizes auch im math-mode automatisch nichtkursiv gesetzt werden.
-\def\subinrm#1{\sb{\rm#1}}
-{\catcode`\_=13 \global\let_=\subinrm}
-\mathcode`_="8000
-\def\upsubscripts{\catcode`\_=12 } \def\normalsubscripts{\catcode`\_=8 }
-
-\upsubscripts
