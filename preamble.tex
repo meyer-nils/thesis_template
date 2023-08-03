@@ -3,6 +3,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{microtype}
+\usepackage{setspace}
+\usepackage[all]{nowidow}
 \usepackage{palatino}
 
 % Bibliography
@@ -40,12 +42,11 @@
 % Units
 \usepackage{siunitx}
 
-
 % Captions 
 \usepackage[format=plain,indention=0cm, labelfont=bf, font=footnotesize]{caption}
 \usepackage[font=footnotesize, labelfont=normalfont]{subcaption}
 
-% GRAPHICS
+% Graphics
 \usepackage{graphicx}
 \usepackage{tikz}
 \usepackage{here}
@@ -53,7 +54,7 @@
 \pgfplotsset{compat=1.18} 
 \usepackage[absolute]{textpos}
 
-% TABLES
+% Tables
 \usepackage{tabularx}
 \usepackage{colortbl}
 \usepackage{color}
@@ -63,40 +64,35 @@
 % Verbatims 
 \usepackage{fancyvrb}
 \usepackage{verbdef} 
-% \usepackage{etoolbox}
-% \makeatletter
-% \preto{\@verbatim}{\topsep=0pt \partopsep=0pt }
-% \makeatother
 
 % Glossary
 \usepackage[acronym,toc]{glossaries}
 \newglossary[slg]{symbols}{syi}{syg}{Symbols}
 \glsaddkey{unit}{\glsentrytext{\glslabel}}{\glsentryunit}{\GLsentryunit}{\glsunit}{\Glsunit}{\GLSunit}
 \newglossarystyle{symbunitlong}{%
-\setglossarystyle{long3col}% base this style on the list style
-\renewenvironment{theglossary}{% Change the table type --> 3 columns
+\setglossarystyle{long3col}
+\renewenvironment{theglossary}{
   \begin{longtable}{lp{\glsdescwidth}>{\centering\arraybackslash}p{2cm}}}%
   {\end{longtable}}%
 %
-\renewcommand*{\glossaryheader}{%  Change the table header
+\renewcommand*{\glossaryheader}{
   \bfseries Symbol & \bfseries Description & \bfseries Unit \\
   \hline
   \endhead}
-\renewcommand*{\glossentry}[2]{%  Change the displayed items
+\renewcommand*{\glossentry}[2]{
 \glstarget{##1}{\glossentryname{##1}} %
-& \glossentrydesc{##1}% Description
+& \glossentrydesc{##1}
 & \glsunit{##1}  \tabularnewline
 }
 }
 
 
-% CUSTOM
+% Months
 \newcommand{\clearemptydoublepage}{\newpage{\pagestyle{empty}\cleardoublepage}}
 \newcommand{\monthword}[1]{\ifcase#1\or January\or February\or March\or April\or May\or June\or July\or August\or September\or October\or November\or December\fi}
 
 
-
-% HEADER & FOOTER
+% Headers and footers
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
@@ -113,16 +109,16 @@
 		\renewcommand{\footrulewidth}{0.pt}
 	}
 
-	% REGULAR PAGES
+	% Regular pages
 	\fancypagestyle{plain}{%
 		\renewcommand{\headrulewidth}{0pt}%
 		\renewcommand{\footrulewidth}{0.1pt}%
 		\fancyhf{}%
-		\fancyfoot[OR]{Page \thepage}				% Seitenzahl
-		\fancyfoot[EL]{Page \thepage} 				% Seitenzahl
+		\fancyfoot[OR]{Page \thepage}
+		\fancyfoot[EL]{Page \thepage}
 	}
 
-	% Style for title
+	% Title pages
 	\fancypagestyle{title}{
 	\fancyhead{}
 	\fancyfoot{}
@@ -137,18 +133,6 @@
         \setlength{\unitlength}{1mm}
         \begin{picture}(0,0)
             \put(-60,-25){\includegraphics[height=35mm]{images/logos/uni_a.png}}
- %           \put(-152,-45){
-  %              \parbox{15em}{
-  %                  \linespread{1}\scriptsize\textbf{Institute of Materials Resource Management}\\
- %                   \textbf{Chair of Materials Engineering}\\
- %                   \scriptsize Prof. Dr.-Ing. Dietmar Koch \newline
- %                   \scriptsize Prof. Dr.-Ing. Suelen Barg \newline
- %                   \scriptsize Prof. Dr.-Ing. Nils Meyer \smallskip \smallskip
- %                   \ \\
- %                   Am Technologiezentrum 8\\
- %                   86159 Augsburg
- %               }
- %           }
         \end{picture}
     }
 
@@ -163,42 +147,35 @@
         \end{tikzpicture};
     \end{tikzpicture}
 	}
-%===============================================================================
-	%%% Kopf- und Fußzeile in der Präambel
+
+    % Preamble pages
 	\fancypagestyle{preamble}{
 		\fancyhf{}
 		\fancyhead{}
 		\fancyfoot{}
-		\renewcommand{\headrulewidth}{0pt}		% Dicke des Strichs oben
-		\renewcommand{\footrulewidth}{0.1pt}			% Dicke des Strichs unten
-
-		\fancyfoot[OR]{Page \thepage}				% Seitenzahl
-		\fancyfoot[EL]{Page \thepage} 				% Seitenzahl
+		\renewcommand{\headrulewidth}{0pt}
+		\renewcommand{\footrulewidth}{0.1pt}
+		\fancyfoot[OR]{Page \thepage}
+		\fancyfoot[EL]{Page \thepage}
 	}
 
-	%===============================================================================
-	%%% Kopf- und Fußzeile im Hauptteil
+	% Main pages
 	\fancypagestyle{main}{
 		\fancyhead{}
 		\fancyfoot{}
-		\renewcommand{\headrulewidth}{0.1pt}		% Dicke des Strichs oben
-		\renewcommand{\footrulewidth}{0.1pt}			% Dicke des Strichs unten
-
-		% E Even page; O Odd page; L Left field; C Center field; R Right field;
-		% \fancyhead[...,...]{} oder \fancyfoot[...,...]{}
-		\fancyhead[EL]{\nouppercase \leftmark}		% Chapter
+		\renewcommand{\headrulewidth}{0.1pt}		
+		\renewcommand{\footrulewidth}{0.1pt}
+		\fancyhead[EL]{\nouppercase \leftmark}
 		\fancyhead[EC]{}
 		\fancyhead[ER]{}
-
 		\fancyhead[OL]{}
 		\fancyhead[OC]{}
-		\fancyhead[OR]{\nouppercase \rightmark}		% Section
-
-		\fancyfoot[OR]{Page \thepage}				% Seitenzahl
-		\fancyfoot[EL]{Page \thepage} 				% Seitenzahl
+		\fancyhead[OR]{\nouppercase \rightmark}
+		\fancyfoot[OR]{Page \thepage}
+		\fancyfoot[EL]{Page \thepage}
 	}
 
-%%% Chapter titles
+% Chapter titles
 \makeatletter
 \def\@makechapterhead#1{%
   \vspace*{50\p@}%
@@ -216,38 +193,25 @@
     \vskip 40\p@
   }}
 \makeatother
-
-% TITLE SPACING
 \usepackage{titlesec}
 \titlespacing{\section}{0pt}{\parskip}{-\parskip}
 \titlespacing{\subsection}{0pt}{\parskip}{-\parskip}
 \titlespacing{\subsubsection}{0pt}{\parskip}{-\parskip}
 
 
-
-%===============================================================================
-%%% Sonstige Pakete und Funktionen
-%\usepackage{nomencl}				% Symbolverzeichnis
-\usepackage{appendix} 				% Anhang und Formatierung im Inhaltsverzeichnis
-\usepackage{geometry}
-\usepackage{ifthen}
-\usepackage{setspace}
-\usepackage[all]{nowidow} %verhindert Hurenkinder
-
-
-
-% PDF OPTIONS
+% PDF options
 \usepackage[breaklinks=true,citebordercolor={1 1 1},linkbordercolor={1 1 1}, hidelinks]{hyperref}
-\hypersetup{bookmarksopen,	        		% Anzeige der Bookmarks mit allen Untereintraegen
-            bookmarksopenlevel=1,			% Verschachtelungstiefe der angezeigten Bookmarks
-            bookmarksnumbered,	   			% Bookmarks enthalten Ueberschriftsnummern
-            pdfhighlight=/I,	      		% Aussehen des Link-Buttons beim Druecken
-            pdfpagemode=UseOutlines,		% Legt fest, wie das Dokument geoeffnet werden soll
-            english, 	              		% Bezeichnung der Hyperlinks
-            pdflang=en,            		% PDF-Sprachkennung nach RFC 3066, ger - deutsch
-         %% pdfstartview=FitV, 	  			% Anzeigemodus fuer die Startseite
-            pdfdisplaydoctitle,  	  		% Anzeige des Dokumenttitels in der Titelleiste
+\hypersetup{bookmarksopen,
+            bookmarksopenlevel=1,
+            bookmarksnumbered,
+            pdfhighlight=/I,
+            pdfpagemode=UseOutlines,
+            english,
+            pdflang=en,
+            pdfdisplaydoctitle,
 }
+
+% Naming the DOI entry.
 \usepackage{doi}
 \renewcommand{\doitext}{DOI: }
 
@@ -264,57 +228,7 @@
 
 \usepackage{listings}
 \usepackage{setspace}
-\definecolor{Code}{rgb}{0,0,0}
-\definecolor{Decorators}{rgb}{0.5,0.5,0.5}
-\definecolor{Numbers}{rgb}{0.5,0,0}
-\definecolor{MatchingBrackets}{rgb}{0.25,0.5,0.5}
-\definecolor{Keywords}{rgb}{0,0,1}
-\definecolor{self}{rgb}{0,0,0}
-\definecolor{Strings}{rgb}{0,0.63,0}
-%\definecolor{Comments}{rgb}{0,0.63,1}
-\definecolor{Comments}{RGB}{28,131,31}
-\definecolor{Backquotes}{rgb}{0,0,0}
-\definecolor{Classname}{rgb}{0,0,0}
-\definecolor{FunctionName}{rgb}{0,0,0}
-\definecolor{Operators}{rgb}{0,0,0}
-\definecolor{Background}{rgb}{0.98,0.98,0.98}
-\lstdefinestyle{Python222}{
-	language=Python,
-	breaklines=true,
-	postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
-	numbers=left,
-	numberstyle=\footnotesize,
-	numbersep=1em,
-	xleftmargin=1em,
-	framextopmargin=2em,
-	framexbottommargin=2em,
-	showspaces=false,
-	showtabs=false,
-	showstringspaces=false,
-	frame=l,
-	tabsize=4,
-	% Basic
-	basicstyle=\ttfamily\small\setstretch{1},
-	backgroundcolor=\color{Background},
-	% Comments
-%	commentstyle=\color{Comments}\slshape,
-	commentstyle=\color{Comments},
-	% Strings
-	stringstyle=\color{darkgray},
-	morecomment=[s][\color{Strings}]{"""}{"""},
-	morecomment=[s][\color{Strings}]{'''}{'''},
-	% keywords
-	morekeywords={import,from,class,def,for,while,if,is,in,elif,else,not,and,or,print,break,continue,return,True,False,None,access,as,,del,except,exec,finally,global,import,lambda,pass,print,raise,try,assert},
-	keywordstyle={\color{Keywords}\bfseries},
-	% additional keywords
-	%morekeywords={[2]@invariant,pylab,numpy,np,scipy},
-	keywordstyle={[2]\color{Decorators}\slshape},
-	emph={self},
-	emphstyle={\color{self}\slshape},
-	%
-}
 \linespread{1.3}
-
 
 \usepackage{threeparttable,booktabs}
 \usepackage[section]{placeins}
