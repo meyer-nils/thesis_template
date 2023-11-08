@@ -4,6 +4,8 @@
 # Templates for theses at MRM Materials Engineering
 
 There are Microsoft Word and LaTeX templates for theses in this repository. These are suggestions to help you writing your thesis at the MRM chair for Materials Engineering. 
+The suggested structure and section titles are mere suggestions and should be adopted to inidividual needs or preferences. 
+Discuss the individual structure with the supervisors.
 
 ### Adding students
 Students can be added as members of the repository (Settings -> Members) with guest privileges after logging in at least once at [git.rz.uni-augsburg.de](https://git.rz.uni-augsburg.de).
