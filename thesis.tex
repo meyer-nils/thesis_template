@@ -2,7 +2,6 @@
 \newcounter{NstopRoman}
 \input{preamble}
 \input{metadata}
-\input{glossary}
 \author{\Author}
 \title{\EnglishTitle}
 
@@ -68,9 +67,8 @@
 
     % GLOSSARY
 	% \clearemptydoublepage
-    \glsaddall
-	\printglossary[type=\acronymtype,style=long,nonumberlist]
-    \printglossary[type=symbols, style=symbunitlong]
+    \input{acronyms}
+
 
     % MAIN PART
     \setcounter{NstopRoman}{\value{page}}

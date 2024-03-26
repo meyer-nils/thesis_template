@@ -65,27 +65,8 @@
 \usepackage{fancyvrb}
 \usepackage{verbdef} 
 
-% Glossary
-\usepackage[acronym,toc]{glossaries}
-\newglossary[slg]{symbols}{syi}{syg}{Symbols}
-\glsaddkey{unit}{\glsentrytext{\glslabel}}{\glsentryunit}{\GLsentryunit}{\glsunit}{\Glsunit}{\GLSunit}
-\newglossarystyle{symbunitlong}{%
-\setglossarystyle{long3col}
-\renewenvironment{theglossary}{
-  \begin{longtable}{lp{\glsdescwidth}>{\centering\arraybackslash}p{2cm}}}%
-  {\end{longtable}}%
-%
-\renewcommand*{\glossaryheader}{
-  \bfseries Symbol & \bfseries Description & \bfseries Unit \\
-  \hline
-  \endhead}
-\renewcommand*{\glossentry}[2]{
-\glstarget{##1}{\glossentryname{##1}} %
-& \glossentrydesc{##1}
-& \glsunit{##1}  \tabularnewline
-}
-}
-
+% Acronyms
+\usepackage[printonlyused]{acronym}
 
 % Months
 \newcommand{\clearemptydoublepage}{\newpage{\pagestyle{empty}\cleardoublepage}}
@@ -233,3 +214,4 @@
 \usepackage{threeparttable,booktabs}
 \usepackage[section]{placeins}
 \usepackage{longtable}
+
