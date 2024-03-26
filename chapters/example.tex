@@ -153,4 +153,15 @@
     \end{Verbatim}
 
     resulting in the expression \SI{2.0}{\micro\gram\per\cubic\metre}. The package takes care of proper spacing between numbers and units as well as line breaks.
+
+\section*{Acronyms}
+    For using an acronym in you text, use the command \verb|\ac{}| in the brackets write the acronym you want to use. When you use this command for the first time, it will automatically write out the acronym and explanation like this: \ac{CMC}. If you use it afterwards it will only display the abreviation: \ac{CMC}.
+    In this way you don't have to check where you used an abreviation the first time, you can always use the command and it will be explained automatically. Additionally in the pdf it will also Link to the acronym chapter every time you use it.
+    
+    If you want to use the plural form, you can use the command \verb|\acp{}| which will show like this: \acp{CMC}.
+
+    In case you want to force using the short form even when an acronym is used for the first time, use the command \verb|\acs{}| to show it like this: \acs{am}. This does not count as introduction, so if it was not introduced before it will be on the next regular use: \ac{am}.
+
+    If you want to force the long form without the abbreviation in brackets, use the command \verb|\acl{}| to show this: \acl{am}.
+
 }
