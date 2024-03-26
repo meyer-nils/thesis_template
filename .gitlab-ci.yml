@@ -9,6 +9,7 @@ compile_thesis:
   artifacts:
     paths:
       - ./*.pdf
+      - ./*.log
     expire_in: 2 years
 
 compile_expose:
@@ -22,4 +23,5 @@ compile_expose:
   artifacts:
     paths:
       - ./*.pdf
+      - ./*.log
     expire_in: 1 day
