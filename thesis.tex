@@ -69,8 +69,12 @@
     % GLOSSARY
 	% \clearemptydoublepage
     \glsaddall
-	\printglossary[type=\acronymtype,style=long,nonumberlist]
+	%\printglossary[type=\acronymtype,style=long,nonumberlist]
+	\input{acronyms}
     \printglossary[type=symbols, style=symbunitlong]
+
+	% if the acronym package should be used remove the acronym section in the glossary and add \input{acronyms}
+	
 
     % MAIN PART
     \setcounter{NstopRoman}{\value{page}}
