@@ -1,4 +1,4 @@
-\documentclass[12pt,a4paper,twoside]{book}
+\documentclass[12pt,a4paper,oneside]{book}
 \newcounter{NstopRoman}
 \input{preamble}
 \input{metadata}
@@ -25,9 +25,6 @@
 
 	\end{center}
 
-    \clearemptydoublepage
-    % Data
-	\pagestyle{title}
     \vfill
     University of Augsburg\\ 
     Faculty of Mathematics, Natural Sciences, and Materials Engineering\\
@@ -38,10 +35,9 @@
         First examiner:     & \FirstReviewer &\\
         Second examiner:    & \SecondReviewer 
         & Augsburg, \SubmissionMonth\\
-		 \\
 	\end{tabularx}
 
-    % DECLARATIOn
+    % DECLARATION
 	\clearemptydoublepage
 	\input{templates/declaration}
 
@@ -50,12 +46,10 @@
     \input{templates/acknowledgments}
 
     % ABSTRACT
-    \pagestyle{preamble}
 	\clearemptydoublepage
     \input{templates/abstract}
 
     % GRAPHICAL ABSTRACT
-    \pagestyle{preamble}
 	\clearemptydoublepage
     \input{templates/graphical_abstract}
 
