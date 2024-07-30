@@ -3,27 +3,40 @@
     \color{orange}
     
     \section*{Citations}
-    This chapter will make use of many citations, hence some notes on citing are summarized here. 
     There are two options to cite in \LaTeX:
     
     \begin{enumerate}
-    	\item The command \verb!\cite{key}! creates an automatically updated reference number, such as in this example: \emph{This is a sample citation \cite{Einstein1905}}. You may cite multiple sources with \verb!\cite{key1, key2}! such that all references appear in a single bracket. \emph{This is a sample citation with multiple sources \cite{Einstein1905, Darwin1859}}.
-    	\item The command \verb!\textcite{key}! adds the author name, such as in this example: \emph{\textcite{Einstein1905} wrote an important paper}. One author or two authors should be explicitly named, more authors are denoted \emph{Einstein et al.} in the text. The command \verb!\textcite{key}! takes care of this automatically.
+    	\item The command \verb!\cite{key}! creates an automatically updated reference number, such as in this example: 
+        \begin{center}
+            \emph{This is a sample citation \cite{Einstein1905}.}
+        \end{center}
+        You may cite multiple sources with \verb!\cite{key1, key2}! such that all references appear in a single bracket.
+        \begin{center}
+            \emph{This is a sample citation with multiple sources \cite{Einstein1905, Darwin1859}}.
+        \end{center}
+    	\item The command \verb!\textcite{key}! adds the author name, such as in this example: 
+     \begin{center}
+         \emph{\textcite{Einstein1905} wrote an important paper}.
+     \end{center} 
+     One author or two authors should be explicitly named, more authors are denoted \emph{Einstein et al.} in the text. The command \verb!\textcite{key}! takes care of this automatically.
     \end{enumerate}
 
-    The keys and bibliographic data for the citations are listed in the file \texttt{literature.bib}. This can be created manually using the \emph{BibTex} format or by any literature management software. Usage of such a literature management software (e.g. Citavi, Mendely, ResearchRabbit, or Endnote) is highly recommended.
+    The keys and bibliographic data for the citations are listed in the file \texttt{literature.bib}. This can be created manually using the \emph{BibTex} format or by any literature management software. Usage of such a literature management software (e.g. Citavi, Mendeley, Zotero, ResearchRabbit, or Endnote) is highly recommended.
     The bibliography should contain just references, which are actually used and referred to. In the default configuration of this template, the template takes care of this automatically. 
 
     Images, tables, technical specifications, etc. have to be cited as well. Adaptions of a figure from literature should be indicated as well, e.g. by writing \emph{adapted from ...}.
 
     \section*{Language and style}
-    A scientific thesis requires concise and precise language. Using past tense is reasonable in this section, as other people may have contributed to the state of research in the past, but apart from this, present tense should be used throughout the work.
-    Expressions like \emph{high temperature}, \emph{good rheology} or every-day language should be avoided.
+    A scientific thesis requires concise and precise language. Expressions like \emph{high temperature}, \emph{good rheology} or every-day language should be avoided. 
+
+    Using past tense is reasonable for experiments conducted by yourself or other researchers in literature. General results should be reported in present tense, as they are valid at any time.
+
+    Use consistent writing (British English, American English) throughout the text and whenever multiple spellings of a word are possible. 
 
     Use sections and subsections reasonable and consistent. It should not be too granular and subsections do not make any sense, if there is not at least one other subsection at the same level. It is an important task of a student thesis to find a good structure and should be discussed in close coordination with supervisors.
 
     \section*{Figures}
-    This chapter will probably make use of several figures, e.g. showing experimental setups or sketches. The subsequent code showcases insertion of an image, where the expression \emph{path} should be replaced with the actual path to your image. 
+    The subsequent code showcases insertion of an image, where the expression \emph{path} should be replaced with the actual path to your image. Figures should be centered and not surrounded by running text. 
     
     \begin{Verbatim}
         \begin{figure}[ht]
@@ -45,7 +58,7 @@
         \label{fig:image_label_a}
     \end{figure}
 
-    Make sure that the image is readable, i.e. features are large enough and the image quality is high. For pictures, use \texttt{JPEG} format, for diagrams and sketches use \texttt{PNG} format and for diagrams its best to use \texttt{PDF} format for optimal trade-offs between file size and quality. For diagrams, make sure to include axis labels with a sufficiently large font and use \emph{in <unit>} instead of rectangular brackets to indicate units. Make sure that colors are easy to distinguish, some background on colors may be found \href{here}{https://colorbrewer2.org} and \href{here}{https://bids.github.io/colormap/}. 
+    Make sure that the image is readable, i.e. features are large enough and the image quality is high. For pictures, use \texttt{JPEG} format and include a scale bar, if the size is relevant (e.g. microscopy images).  For diagrams and sketches use vector formats like \texttt{PDF} or \texttt{SVG} for optimal quality. For diagrams, make sure to include axis labels with a sufficiently large font and use \emph{in <unit>} instead of rectangular brackets to indicate units. Make sure that colors are easy to distinguish, some background on colors may be found \href{here}{https://colorbrewer2.org} and \href{here}{https://bids.github.io/colormap/}. 
 
     We may also combine multiple images, for example by the following code 
     
@@ -155,8 +168,8 @@
     resulting in the expression \SI{2.0}{\micro\gram\per\cubic\metre}. The package takes care of proper spacing between numbers and units as well as line breaks.
 
 \section*{Acronyms}
-    For using an acronym in you text, use the command \verb|\ac{}| in the brackets write the acronym you want to use. When you use this command for the first time, it will automatically write out the acronym and explanation like this: \ac{CMC}. If you use it afterwards it will only display the abreviation: \ac{CMC}.
-    In this way you don't have to check where you used an abreviation the first time, you can always use the command and it will be explained automatically. Additionally in the pdf it will also Link to the acronym chapter every time you use it.
+    For using an acronym in your text, use the command \verb|\ac{}| and place the acronym you want to use in the bracket. When you use this command for the first time, it will automatically write out the acronym and explanation like this: \ac{CMC}. If you use it afterwards, it will only display the abbreviation: \ac{CMC}.
+    In this way you don't have to check where you used an abbreviation the first time, you can always use the command and it will be explained automatically. Additionally, it will also link to the acronym chapter every time you use it.
     
     If you want to use the plural form, you can use the command \verb|\acp{}| which will show like this: \acp{CMC}.
 

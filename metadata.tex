@@ -1,13 +1,20 @@
 % Fill in basic info here
 
-% Is this a Master's thesis or Bachelor's thesis? 
-\newcommand{\Thesis}{\textcolor{orange}{\MakeUppercase{Thesis type}}}
+% Depending on the type of thesis, uncomment appropriately:
+\newcommand{\Thesis}{\NoCaseChange{\textcolor{orange}}{Thesis type}}
+%\newcommand{\Thesis}{Bachelor's thesis}
+%\newcommand{\Thesis}{Master's thesis}
+%\newcommand{\Thesis}{Lab project}
 
-% Your study program (e.g. Materials Science and Engineering)
+% Choose your study program 
 \newcommand{\Program}{\textcolor{orange}{Program}}
+% \newcommand{\Program}{Materials Science and Engineering}
+% \newcommand{\Program}{Industrial Engineering}
 
-% The degree pursued (e.g. Master of Science)
+% Choose the degree pursued 
 \newcommand{\Degree}{\textcolor{orange}{Degree}}
+% \newcommand{\Degree}{Bachelor of Science}
+% \newcommand{\Degree}{Master of Science}
 
 % Your name
 \newcommand{\Author}{\textcolor{orange}{The author}}
@@ -30,5 +37,8 @@
 % Date of submission
 \newcommand{\SubmissionMonth}{\monthword{\the\month} \the\year}
 
-% The professorship (e.g. Materials Engineering or Data-driven Product Engineering and Design)
+% Choose the professorship
 \newcommand{\Professorship}{\textcolor{orange}{Professorship}}
+% \newcommand{\Professorship}{Materials Engineering}
+% \newcommand{\Professorship}{Complex Structured Materials for demanding environments}
+% \newcommand{\Professorship}{Data-driven Product Engineering and Design}

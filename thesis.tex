@@ -11,7 +11,7 @@
 	\pagestyle{title}
 	\vspace*{3cm}
 	\begin{center}
-		{\huge \Thesis}
+		{\huge \MakeUppercase{\Thesis}}
 		\vspace{1.5cm}
   
 		{\Large \EnglishTitle}
@@ -34,7 +34,7 @@
 		Supervisor:         & \Supervisor &\\ 
         First examiner:     & \FirstReviewer &\\
         Second examiner:    & \SecondReviewer 
-        & Augsburg, \SubmissionMonth\\
+        & \City, \SubmissionMonth\\
 	\end{tabularx}
 
     % DECLARATION
@@ -54,16 +54,14 @@
 	\clearemptydoublepage
     \input{templates/graphical_abstract}
 
-    
+    % GLOSSARY
+	% \clearemptydoublepage
+    \input{templates/acronyms}
+
     % TABLE OF CONTENTS
 	\clearemptydoublepage
 	\pdfbookmark{\contentsname}{toc}
 	\tableofcontents
-
-    % GLOSSARY
-	% \clearemptydoublepage
-    \input{acronyms}
-
 
     % MAIN PART
     \setcounter{NstopRoman}{\value{page}}
