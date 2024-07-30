@@ -4,7 +4,7 @@
 # Templates for theses at MRM Materials Engineering
 
 There are Microsoft Word and LaTeX templates for theses in this repository. These are suggestions to help you writing your thesis at the MRM chair for Materials Engineering. 
-The suggested structure and section titles are mere suggestions and should be adopted to inidividual needs or preferences. 
+The suggested structure and section titles are mere suggestions and should be adopted to individual needs or preferences. 
 Discuss the individual structure with the supervisors.
 
 ### Adding students
@@ -28,11 +28,11 @@ The basic part should not exceed a quarter of the number of pages of the written
 ### How to fill the template
 The template provides a basic structure for a thesis. Your edits will change primarily those fields, which are currently orange. For more information on LaTeX, also take a look at the [MRM Hub](https://mrmhub.mrm.uni-augsburg.de/index.php?r=wiki%2Fpage%2Fview&title=LaTeX&cguid=1fab046e-9c7c-41f9-b982-a200c3f1c54a).
 
-You may start by adding the basic information to `templates/metadata.tex`. This includes the type of thesis, your address, your supervisor names, etc. You should replace all orange entries, for example `\textcolor{orange}{Thesis type}` with `Bachelor's thesis`.
+You may start by adding the basic information to `templates/metadata.tex`. This includes the type of thesis, your address, your supervisor names, etc. You should replace all orange entries with the correct information.
 
-If applicable, you may replace the orange text in the file `expose.tex` to write a short summary of your task at the beginning of your thesis. Writing the Exposé gives you an ooportunity to formulate the scope of the thesis in your own words. Stating a clear scope helps to prevent potential misunderstandings with your supervisor and can help you to structure your work. 
+If applicable, you may replace the orange text in the file `expose.tex` to write a short summary of your task at the beginning of your thesis. Writing the Exposé gives you an opportunity to formulate the scope of the thesis in your own words. Stating a clear scope helps to prevent potential misunderstandings with your supervisor and can help you to structure your work. 
 
-The thesis itself is built with the file `thesis.tex`. This document is just a wrapper to include various files, in wich you write the actual text. Therefore you should edit the individual files in the directories `templates` and `chapters` based on the instructions provided in orange text color.
+The thesis itself is built with the file `thesis.tex`. This document is just a wrapper to include various files, in which you write the actual text. Therefore you should edit the individual files in the directories `templates` and `chapters` based on the instructions provided in orange text color.
 
 ### Current PDFs
 The most recent version of the LaTeX template is automtically build to PDF after each commit and the PDFs may be found here:
