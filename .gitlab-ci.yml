@@ -3,7 +3,7 @@ compile_thesis:
   image: arkark/latexmk:full
   script:
     - rm /root/.latexmkrc
-    - latexmk -pdf -g thesis.tex
+    - latexmk -pdf -f thesis.tex
   tags:
     - latex
   artifacts:
@@ -17,7 +17,7 @@ compile_expose:
   image: arkark/latexmk:full
   script:
     - rm /root/.latexmkrc
-    - latexmk -pdf -g expose.tex
+    - latexmk -pdf -f expose.tex
   tags:
     - latex
   artifacts:
