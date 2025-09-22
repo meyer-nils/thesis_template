@@ -17,3 +17,6 @@
 *.slg
 *.syi
 *.toc
+*.bcf
+*.run.xml
+*.pdf
