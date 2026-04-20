@@ -1,5 +1,7 @@
 ![LaTeX](https://img.shields.io/badge/Made%20with-LaTeX-1f425f.svg)
 ![Build](https://github.com/meyer-nils/thesis_template/actions/workflows/compile.yml/badge.svg)
+[![Download thesis.pdf](https://img.shields.io/badge/Download-thesis.pdf-blue?logo=adobeacrobatreader)](https://github.com/meyer-nils/thesis_template/releases/latest/download/thesis.pdf)
+[![Download expose.pdf](https://img.shields.io/badge/Download-expose.pdf-blue?logo=adobeacrobatreader)](https://github.com/meyer-nils/thesis_template/releases/latest/download/expose.pdf)
 
 # LaTeX Thesis Template 
 
@@ -84,11 +86,7 @@ Larger deviations from these ranges should be discussed with your supervisor.
 
 ## Downloading the compiled PDFs
 
-Every push to the `main` branch triggers an automated build. To download the latest compiled PDF of the template:
-
-1. Go to the **Actions** tab of the repository.
-2. Click the most recent successful workflow run.
-3. Scroll to **Artifacts** and download `compiled-pdfs`.
+Every push to `main` automatically compiles the template and attaches the PDFs to the [latest release](https://github.com/meyer-nils/thesis_template/releases/latest). Use the download buttons at the top of this page, or go to **Releases → latest** on the repository page.
 
 ---
 

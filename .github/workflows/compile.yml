@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write  # needed to create/update the "latest" release
 
 jobs:
   build:
@@ -32,10 +32,22 @@ jobs:
           root_file: expose.tex
           args: -pdf -interaction=nonstopmode -file-line-error
 
-      - name: Upload compiled PDFs
+      - name: Upload compiled PDFs as artifact
         uses: actions/upload-artifact@v4
         with:
           name: compiled-pdfs
           path: "*.pdf"
-          # Keep artifacts for 90 days
-          retention-days: 90
+          retention-days: 365
+
+      # Publish PDFs to a rolling "latest" release so they can be downloaded
+      # without a GitHub login. Only runs on direct pushes to main/master,
+      # not on pull requests.
+      - name: Publish to "latest" release
+        if: github.event_name != 'pull_request'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          name: Latest compiled PDFs
+          body: "PDFs compiled automatically from the latest commit on `main`."
+          prerelease: true
+          files: "*.pdf"
