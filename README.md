@@ -1,7 +1,7 @@
 ![LaTeX](https://img.shields.io/badge/Made%20with-LaTeX-1f425f.svg)
 ![Build](https://github.com/meyer-nils/thesis_template/actions/workflows/compile.yml/badge.svg)
 
-# LaTeX Thesis Template — MRM Faculty
+# LaTeX Thesis Template 
 
 This repository provides a **LaTeX template** for student theses (lab projects, bachelor's and master's theses) at the **Institute of Materials Resource Management (MRM)** of the **University of Augsburg**.
 
@@ -22,6 +22,8 @@ Alternatively, do it manually:
 1. Download this repository as a ZIP file (`Code → Download ZIP` on GitHub).
 2. In Overleaf: **New Project → Upload Project** and select the ZIP.
 3. Set the main document to `thesis.tex` (Overleaf usually detects this automatically).
+
+> The free tier on Overleaf offers only limited compile time. If you or your supervisor do not have access to Overleaf with sufficient compile time, simply use Option B below. 
 
 ### Option B — Local installation
 
