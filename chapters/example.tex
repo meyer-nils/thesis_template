@@ -27,13 +27,24 @@
     Images, tables, technical specifications, etc. have to be cited as well. Adaptions of a figure from literature should be indicated as well, e.g. by writing \emph{adapted from ...}.
 
     \section*{Language and style}
-    A scientific thesis requires concise and precise language. Expressions like \emph{high temperature}, \emph{good rheology} or every-day language should be avoided. 
+    A scientific thesis requires concise and precise language.
+    Avoid vague qualitative expressions such as \emph{high temperature} or \emph{good rheology} - always quantify: \emph{a temperature of \SI{1200}{\degreeCelsius}}, \emph{a tensile strength \SI{15}{\percent} above the reference value}.
+    Do not use personal pronouns (\emph{I}, \emph{we}); prefer passive constructions, e.g.\ \emph{The samples were prepared\ldots}
+    Remove filler words and phrases that add no information: \emph{so to speak}, \emph{simply}, \emph{generally}, \emph{basically}, \emph{of course}, \emph{it should be noted that}.
 
-    Using past tense is reasonable for experiments conducted by yourself or other researchers in literature. General results should be reported in present tense, as they are valid at any time.
+    Use past tense for experiments conducted by yourself or reported in literature. Use present tense for general results and statements that are valid at any time.
 
-    Use consistent writing (British English, American English) throughout the text and whenever multiple spellings of a word are possible. 
+    Use consistent spelling throughout (either British or American English) and apply the same choice whenever multiple spellings of a word are permitted.
+    Enable the spell checker in your editor, or use an external tool such as LanguageTool or Grammarly before submission.
 
-    Use sections and subsections reasonable and consistent. It should not be too granular and subsections do not make any sense, if there is not at least one other subsection at the same level. It is an important task of a student thesis to find a good structure and should be discussed in close coordination with supervisors.
+    Use sections and subsections judiciously. The structure should not be too granular, and a subsection only makes sense if there is at least one other subsection at the same level. Finding a good structure is an important part of a student thesis and should be discussed with your supervisor.
+
+    Before submission, work through the following checklist:
+    \begin{itemize}
+        \item \textbf{Hyphenation:} Avoid more than three consecutive line-end hyphens. Do not separate proper nouns if possible, and avoid breaks that leave fewer than three characters on either side. The \texttt{microtype} package (already loaded) reduces the need for manual corrections.
+        \item \textbf{Widows and orphans:} Avoid single lines stranded at the top or bottom of a page. The \texttt{nowidow} package (already loaded) handles this automatically in most cases.
+        \item \textbf{Proofreading:} Read the full document yourself. Ideally, also ask someone unfamiliar with the content to proofread it - a reader without prior knowledge focuses on language rather than content.
+    \end{itemize}
 
     \section*{Figures}
     The subsequent code showcases insertion of an image, where the expression \emph{path} should be replaced with the actual path to your image. Figures should be centered and not surrounded by running text. 
@@ -58,7 +69,9 @@
         \label{fig:image_label_a}
     \end{figure}
 
-    Make sure that the image is readable, i.e. features are large enough and the image quality is high. For pictures, use \texttt{JPEG} format and include a scale bar, if the size is relevant (e.g. microscopy images).  For diagrams and sketches use vector formats like \texttt{PDF} or \texttt{SVG} for optimal quality. For diagrams, make sure to include axis labels with a sufficiently large font and use \emph{in <unit>} instead of rectangular brackets to indicate units. Make sure that colors are easy to distinguish, some background on colors may be found \href{https://colorbrewer2.org}{here} and \href{https://bids.github.io/colormap/}{here}. 
+    Make sure that the image is readable, i.e. features are large enough and the image quality is high. For pictures, use \texttt{JPEG} format and include a scale bar, if the size is relevant (e.g. microscopy images). Images not created by yourself must have a resolution of at least 200\,dpi; in general it is preferable to redraw figures from literature yourself rather than scanning them. For diagrams and sketches use vector formats like \texttt{PDF} or \texttt{SVG} for optimal quality. For diagrams, make sure to include axis labels with a sufficiently large font and use \emph{in <unit>} instead of rectangular brackets to indicate units. Make sure that colors are easy to distinguish, some background on colors may be found \href{https://colorbrewer2.org}{here} and \href{https://bids.github.io/colormap/}{here}.
+
+    Every figure must have a caption placed \emph{below} it. The caption should be self-contained (understandable without reading the surrounding text) and must end with a full stop. If the figure was not created by you or was adapted from another source, a reference must be included in the caption. Extensive raw data, additional figures that would interrupt the text flow, or very long tables belong in the appendix.
 
     We may also combine multiple images, for example by the following code 
     
@@ -126,7 +139,7 @@
     	\end{tabular*}
     \end{table}
 
-    Tables must have headlines and must be referred to in the text. Numbers should be aligned to the right and vertical lines should be omitted.
+    Tables must have headlines and must be referred to in the text. Numbers in cells should be right-aligned; text in cells should be left-justified or centred. Vertical lines should be omitted.
 
 
     \section*{Equations}
@@ -148,9 +161,15 @@
 
     where $x$ denotes the variable of function $f: \mathcal{R} \rightarrow \mathcal{R}$. Note that the equation is integrated in the text flow and needs proper punctuation. Do not place equations at random positions between sentences.
     
-    Specific operators and functions like $\ln$, $\cos$ and the $\textrm{d}$ in differentials should be non-italic. For example, the cosine $\cos$ is distinguished from a product of variables $c$, $o$ and $s$ denoted as $cos$ by this convention.
+    Follow these typesetting conventions throughout:
+    \begin{itemize}
+        \item \textbf{Italic for variables and scalar quantities:} $x$, $F$, $E$. Only variable (running) indices are italic, e.g.\ $\sigma_i$; descriptive indices are upright, e.g.\ $\sigma_\textrm{max}$.
+        \item \textbf{Upright for functions, operators and constants:} Standard functions (\verb|\cos|, \verb|\sin|, \verb|\ln|, \verb|\exp|) are already upright in math mode. Write the differential and imaginary unit upright as well: \verb|\textrm{d}x|, \verb|\textrm{i}|. Mathematical and physical constants ($\pi$, $e$, $k$, $R$) are set upright.
+        \item \textbf{Chemical formulas upright:} Write \verb|\textrm{H}_2\textrm{O}|, not $H_2O$.
+    \end{itemize}
+    For example, the cosine $\cos$ is distinguished from a product of variables $c$, $o$ and $s$ written as $cos$ by this convention.
 
-    You may also use \verb|$ 1/x $| for short in-line equations in the text like $1/x$. This is a reference to Equation \ref{eq:key}. 
+    You may also use \verb|$ 1/x $| for short in-line equations in the text like $1/x$. This is a reference to Equation \ref{eq:key}.
 
     \section*{Units}
     For dealing with dimensional values, the \texttt{siunitx} package is useful. In text or math mode a value can be assigned a unit with the following syntax:
@@ -167,7 +186,14 @@
 
     resulting in the expression \SI{2.0}{\micro\gram\per\cubic\metre}. The package takes care of proper spacing between numbers and units as well as line breaks.
 
-\section*{Acronyms}
+    Additional conventions for quantities and numbers:
+    \begin{itemize}
+        \item \textbf{Numbers in running text:} Write out numbers from one to twelve in words. Use numerals for 13 and above, for all values that carry a unit (e.g.\ \emph{7~\textmu m}), and for comparisons (e.g.\ \emph{2 of 5 specimens}).
+        \item \textbf{Decimal precision:} The number of decimal places must match the precision of the measurement instrument; more than three decimal places are rarely justified. Always accompany mean values with a measure of scatter (standard deviation, confidence interval, or box plot).
+        \item \textbf{Ratio notation:} Both $\textrm{km/h}$ and $\textrm{km}\cdot\textrm{h}^{-1}$ are acceptable; use one form consistently throughout the document.
+    \end{itemize}
+
+    \section*{Acronyms}
     For using an acronym in your text, use the command \verb|\ac{}| and place the acronym you want to use in the bracket. When you use this command for the first time, it will automatically write out the acronym and explanation like this: \ac{CMC}. If you use it afterwards, it will only display the abbreviation: \ac{CMC}.
     In this way you don't have to check where you used an abbreviation the first time, you can always use the command and it will be explained automatically. Additionally, it will also link to the acronym chapter every time you use it.
     
@@ -176,5 +202,11 @@
     In case you want to force using the short form even when an acronym is used for the first time, use the command \verb|\acs{}| to show it like this: \acs{am}. This does not count as introduction, so if it was not introduced before it will be on the next regular use: \ac{am}.
 
     If you want to force the long form without the abbreviation in brackets, use the command \verb|\acl{}| to show this: \acl{am}.
+
+    \section*{Footnotes}
+    Footnotes are inserted with \verb|\footnote{text}| at the point in the text where the footnote marker should appear.
+    Use footnotes sparingly and only for supplementary information that would interrupt the flow of the main text.
+    Footnotes must not contain essential arguments or results - if information is important enough to include, put it in the main text.
+    Note that footnote numbering restarts from 1 in each chapter, which is handled automatically.
 
 }
