@@ -1,7 +1,7 @@
 ![LaTeX](https://img.shields.io/badge/Made%20with-LaTeX-1f425f.svg)
 ![Build](https://github.com/meyer-nils/thesis_template/actions/workflows/compile.yml/badge.svg)
-[![Download thesis.pdf](https://img.shields.io/badge/Download-thesis.pdf-blue?logo=adobeacrobatreader)](https://github.com/meyer-nils/thesis_template/releases/download/latest/thesis.pdf)
-[![Download expose.pdf](https://img.shields.io/badge/Download-expose.pdf-blue?logo=adobeacrobatreader)](https://github.com/meyer-nils/thesis_template/releases/download/latest/expose.pdf)
+[![Download thesis.pdf](https://img.shields.io/badge/Download-thesis.pdf-blue)](https://github.com/meyer-nils/thesis_template/releases/download/latest/thesis.pdf)
+[![Download expose.pdf](https://img.shields.io/badge/Download-expose.pdf-blue)](https://github.com/meyer-nils/thesis_template/releases/download/latest/expose.pdf)
 
 # LaTeX Thesis Template 
 
