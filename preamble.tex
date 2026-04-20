@@ -74,6 +74,7 @@
 % Months
 \newcommand{\clearemptydoublepage}{\newpage{\pagestyle{empty}\cleardoublepage}}
 \newcommand{\monthword}[1]{\ifcase#1\or January\or February\or March\or April\or May\or June\or July\or August\or September\or October\or November\or December\fi}
+\newcommand{\monthwordDE}[1]{\ifcase#1\or Januar\or Februar\or März\or April\or Mai\or Juni\or Juli\or August\or September\or Oktober\or November\or Dezember\fi}
 
 
 % Headers and footers
@@ -190,5 +191,9 @@
 
 \usepackage{threeparttable}   % tables with footnotes
 
- \usepackage[section]{placeins}
+\usepackage[section]{placeins}
+
+% Apply the document language chosen in metadata.tex (\ThesisLanguage).
+% This must come last so all packages are loaded before the language is activated.
+\AtBeginDocument{\selectlanguage{\ThesisLanguage}}
 

@@ -9,6 +9,15 @@
 % may have specific expectations that override these defaults.
 % ============================================================
 
+% ---- Language toggle ----------------------------------------
+% Set the language of your thesis. This controls:
+%   - hyphenation and typographic rules
+%   - automatically translated labels (Contents, Figure, etc.)
+%   - the title page, declaration, and all chapter headings
+% Change to 'ngerman' for a German-language thesis.
+\newcommand{\ThesisLanguage}{english}  % options: english | ngerman
+% -------------------------------------------------------------
+
 % Depending on the type of thesis, uncomment one line:
 \newcommand{\Thesis}{\textcolor{orange}{\MakeUppercase{Thesis type}}}
 %\newcommand{\Thesis}{\MakeUppercase{Bachelor's thesis}}
@@ -43,8 +52,8 @@
 % The second examiner
 \newcommand{\SecondReviewer}{\textcolor{orange}{The second examiner}}
 
-% Date of submission (auto-filled; override if needed, e.g. \newcommand{\SubmissionMonth}{March 2025})
-\newcommand{\SubmissionMonth}{\monthword{\the\month} \the\year}
+% Date of submission (auto-filled; override if needed, e.g. \newcommand{\SubmissionMonth}{März 2025})
+\newcommand{\SubmissionMonth}{\iflanguage{ngerman}{\monthwordDE{\the\month}}{\monthword{\the\month}} \the\year}
 
 % Choose the professorship — ask your supervisor for the exact name
 \newcommand{\Professorship}{\textcolor{orange}{Professorship}}

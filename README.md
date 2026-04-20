@@ -60,6 +60,12 @@ latexmk -c
 
 1. **`metadata.tex`** — Start here. Fill in your name, thesis type, study programme, supervisors, and professorship. Every field that needs your input is currently shown in **orange** in the compiled PDF. Read the comments in the file for guidance.
 
+   To write your thesis in **German**, change the language toggle at the top of `metadata.tex`:
+   ```latex
+   \newcommand{\ThesisLanguage}{ngerman}  % was: english
+   ```
+   This switches hyphenation rules, all automatically generated labels (Contents → Inhaltsverzeichnis, Figure → Abbildung, etc.), the title page wording, and the declaration to German. Your chapter text still needs to be written in German by you.
+
 2. **`chapters/`** — Write your thesis text in the numbered chapter files. The orange-coloured placeholder text in the compiled PDF explains what each section should contain. You can adjust this structure according to your needs - discuss this with your individual supervisor. 
 
 3. **`literature.bib`** — Add your references in BibTeX format. Use a reference manager (Zotero, JabRef, Mendeley, etc.) to export entries automatically.

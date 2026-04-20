@@ -33,20 +33,25 @@
 		{\large \Author}
 		\vspace{1cm}
 
-        for obtaining the academic degree \emph{\Degree}\\ 
-        in the course \emph{\Program}.
+        \iflanguage{ngerman}{%
+            zur Erlangung des akademischen Grades \emph{\Degree}\\
+            im Studiengang \emph{\Program}.%
+        }{%
+            for obtaining the academic degree \emph{\Degree}\\ 
+            in the course \emph{\Program}.%
+        }
 
 	\end{center}
 
     \vfill
-    University of Augsburg\\ 
-    Faculty of Mathematics, Natural Sciences, and Materials Engineering\\
+    \iflanguage{ngerman}{Universität Augsburg}{University of Augsburg}\\ 
+    \iflanguage{ngerman}{Mathematisch-Naturwissenschaftlich-Technische Fakultät}{Faculty of Mathematics, Natural Sciences, and Materials Engineering}\\
     \Professorship \\
     
 	\begin{tabularx}{\textwidth}{lXr}
-		Supervisor:         & \Supervisor &\\ 
-        First examiner:     & \FirstReviewer &\\
-        Second examiner:    & \SecondReviewer 
+		\iflanguage{ngerman}{Betreuer/in:}{Supervisor:}         & \Supervisor &\\ 
+        \iflanguage{ngerman}{Erstprüfer/in:}{First examiner:}     & \FirstReviewer &\\
+        \iflanguage{ngerman}{Zweitprüfer/in:}{Second examiner:}   & \SecondReviewer 
         & \City, \SubmissionMonth\\
 	\end{tabularx}
 
@@ -55,7 +60,7 @@
 
     % DECLARATIONS
     \clearemptydoublepage
-    \input{templates/declaration}
+    \iflanguage{ngerman}{\input{templates/declaration_de}}{\input{templates/declaration}}
 
     % ACKNOWLEDGMENTS
 	\clearemptydoublepage
