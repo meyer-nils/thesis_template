@@ -190,7 +190,7 @@
     \begin{itemize}
         \item \textbf{Numbers in running text:} Write out numbers from one to twelve in words. Use numerals for 13 and above, for all values that carry a unit (e.g.\ \emph{7~\textmu m}), and for comparisons (e.g.\ \emph{2 of 5 specimens}).
         \item \textbf{Decimal precision:} The number of decimal places must match the precision of the measurement instrument; more than three decimal places are rarely justified. Always accompany mean values with a measure of scatter (standard deviation, confidence interval, or box plot).
-        \item \textbf{Ratio notation:} Both $\textrm{km/h}$ and $\textrm{km}\cdot\textrm{h}^{-1}$ are acceptable; use one form consistently throughout the document.
+        \item \textbf{Ratio notation:} Both $\textrm{km/h}$ and $\textrm{km}\cdot\textrm{h}^{-1}$ are acceptable; use one form consistently throughout the document. The \texttt{siunitx} package usually takes care of this automatically, but you can also specify the output format with the \verb|per-mode| option, e.g. \verb|per-mode=symbol| for the first form and \verb|per-mode=reciprocal| for the second form.
     \end{itemize}
 
     \section*{Acronyms}
