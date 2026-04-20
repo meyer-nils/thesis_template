@@ -1,3 +1,12 @@
+# latexmkrc — latexmk configuration file
+#
+# Overleaf automatically reads this file when the project is compiled online.
+# Local users: latexmk also reads this file automatically when run from the
+# project root, so no extra flags are needed beyond `latexmk -pdf thesis.tex`.
+#
+# The post-processing steps below (qpdf linearisation) are Overleaf-specific
+# and are safely skipped when qpdf is not installed on a local machine.
+
 # Settings
 $xdvipdfmx = "xdvipdfmx -z 6 -i dvipdfmx-unsafe.cfg -o %D %O %S";
 

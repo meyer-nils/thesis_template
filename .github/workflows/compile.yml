@@ -1,0 +1,41 @@
+name: Compile LaTeX
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  # Allow manual runs from the Actions tab
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Compile thesis.tex
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: thesis.tex
+          # latexmk handles biber/biblatex re-runs automatically
+          args: -pdf -interaction=nonstopmode -file-line-error
+
+      - name: Compile expose.tex
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: expose.tex
+          args: -pdf -interaction=nonstopmode -file-line-error
+
+      - name: Upload compiled PDFs
+        uses: actions/upload-artifact@v4
+        with:
+          name: compiled-pdfs
+          path: "*.pdf"
+          # Keep artifacts for 90 days
+          retention-days: 90

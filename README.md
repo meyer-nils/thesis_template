@@ -1,62 +1,96 @@
-![Latex](https://img.shields.io/badge/Made%20with-LaTeX-1f425f.svg)
-![Pipeline](https://git.rz.uni-augsburg.de/mateng-m/thesis_template/badges/main/pipeline.svg)
+![LaTeX](https://img.shields.io/badge/Made%20with-LaTeX-1f425f.svg)
+![Build](https://github.com/meyer-nils/thesis_template/actions/workflows/compile.yml/badge.svg)
 
-# Templates for theses at MRM Materials Engineering
+# LaTeX Thesis Template — MRM Faculty
 
-There are Microsoft Word and LaTeX templates for theses in this repository. These are suggestions to help you writing your thesis at the MRM chair for Materials Engineering. 
-The suggested structure and section titles are mere suggestions and should be adopted to individual needs or preferences. 
-Discuss the individual structure with the supervisors.
+This repository provides a **LaTeX template** for student theses (lab projects, bachelor's and master's theses) at the **Institute of Materials Resource Management (MRM)** of the **University of Augsburg**.
 
-### Adding students
-Students can be added as members of the repository (Settings -> Members) with guest privileges after logging in at least once at [git.rz.uni-augsburg.de](https://git.rz.uni-augsburg.de).
+> **Important: discuss everything with your supervisor first.**
+> This template is a *suggestion* to help you get started. The exact structure, chapter titles, length, and formatting requirements must be agreed upon with your individual supervisor *before* you begin writing. Different chairs and research groups within the MRM may have specific conventions that differ from these defaults.
 
-### Length of the document
-Guidelines for the length of the written version of a Bachelor's or Master's thesis are listed in the table.
-The number of pages refers to the main part (introduction to conclusion). This means that the appendix, list of abbreviations, etc. are not taken into account.
-Larger deviations from the guideline values should be avoided and discussed with the respective supervisor.
-The basic part should not exceed a quarter of the number of pages of the written version.
+---
 
-|             | Pages (Introduction to conclusion) |
-| ----------- | ---------------------------------- |
-| Lab Project | 20 - 30 Pages                      |
-| Bachelor    | 30 - 50 Pages                      |
-| Master      | 50 - 80 Pages                      |
+## Quick start
 
+### Option A — Overleaf (recommended, no installation required)
 
-# LaTeX 
+Click the button below to open a copy of the template directly in Overleaf:
 
-### How to fill the template
-The template provides a basic structure for a thesis. Your edits will change primarily those fields, which are currently orange. For more information on LaTeX, also take a look at the [MRM Hub](https://mrmhub.mrm.uni-augsburg.de/index.php?r=wiki%2Fpage%2Fview&title=LaTeX&cguid=1fab046e-9c7c-41f9-b982-a200c3f1c54a).
+[![Open in Overleaf](https://img.shields.io/badge/Open%20in-Overleaf-47a141?logo=overleaf)](https://www.overleaf.com/docs?snip_uri=https://github.com/meyer-nils/thesis_template/archive/refs/heads/main.zip)
 
-You may start by adding the basic information to `templates/metadata.tex`. This includes the type of thesis, your address, your supervisor names, etc. You should replace all orange entries with the correct information.
+Alternatively, do it manually:
+1. Download this repository as a ZIP file (`Code → Download ZIP` on GitHub).
+2. In Overleaf: **New Project → Upload Project** and select the ZIP.
+3. Set the main document to `thesis.tex` (Overleaf usually detects this automatically).
 
-If applicable, you may replace the orange text in the file `expose.tex` to write a short summary of your task at the beginning of your thesis. Writing the Exposé gives you an opportunity to formulate the scope of the thesis in your own words. Stating a clear scope helps to prevent potential misunderstandings with your supervisor and can help you to structure your work. 
+### Option B — Local installation
 
-The thesis itself is built with the file `thesis.tex`. This document is just a wrapper to include various files, in which you write the actual text. Therefore you should edit the individual files in the directories `templates` and `chapters` based on the instructions provided in orange text color.
+You need a working LaTeX distribution and the `latexmk` tool.
 
-### Current PDFs
-The most recent version of the LaTeX template is automtically build to PDF after each commit and the PDFs may be found here:
-
-[Download "thesis.pdf"](https://git.rz.uni-augsburg.de/api/v4/projects/7022/jobs/artifacts/main/raw/thesis.pdf?job=compile_thesis)
-
-[Download "expose.pdf"](https://git.rz.uni-augsburg.de/api/v4/projects/7022/jobs/artifacts/main/raw/expose.pdf?job=compile_expose)
+| OS | Recommended distribution |
+|----|--------------------------|
+| Windows | [MiKTeX](https://miktex.org/) or [TeX Live](https://tug.org/texlive/) |
+| macOS | [MacTeX](https://www.tug.org/mactex/) |
+| Linux | TeX Live via your package manager (`texlive-full`) |
 
 
-### Usage on your local computer 
-Create a fork for the thesis (project page -> fork -> own account) or simply download the template. 
-You may then compile the document on your local computer with 
-```
-    latexmk -pdf thesis.tex
-```
-or 
-```
-    latexmk -pdf expose.tex
+Clone or download the repository, then compile from the project root:
+
+```bash
+# Compile the thesis
+latexmk -pdf thesis.tex
+
+# Compile the exposé
+latexmk -pdf expose.tex
 ```
 
-This requires you to install LaTeX and the required packages on your local computer.
+All output files are placed in the project root. To clean up auxiliary files:
 
-### Usage with Overleaf
-You may also use the online editor [Overleaf](https://www.overleaf.com/) without installation on your machine. To do so, download the template and upload it to Overleaf as a new project (Overleaf -> New Project -> Upload Project) or clone it directly from https://www.overleaf.com/read/pmhrbthfckqk. 
+```bash
+latexmk -c
+```
 
-# Microsoft Word
-The Microsoft Word template is named `thesis.docx`. You may download it from this repository.
+---
+
+## How to fill in the template
+
+1. **`metadata.tex`** — Start here. Fill in your name, thesis type, study programme, supervisors, and professorship. Every field that needs your input is currently shown in **orange** in the compiled PDF. Read the comments in the file for guidance.
+
+2. **`chapters/`** — Write your thesis text in the numbered chapter files. The orange-coloured placeholder text in the compiled PDF explains what each section should contain. You can adjust this structure according to your needs - discuss this with your individual supervisor. 
+
+3. **`literature.bib`** — Add your references in BibTeX format. Use a reference manager (Zotero, JabRef, Mendeley, etc.) to export entries automatically.
+
+4. **`templates/`** — Fill in the abstract and declaration. Optional chapters (graphical abstract, acronyms, appendix, acknowledgments) can be removed by commenting out the corresponding `\input{...}` lines in `thesis.tex`.
+
+5. **`expose.tex`** — Optional. If your supervisor asks for a written project outline before the thesis, use this file.
+
+---
+
+## Thesis length guidelines
+
+The following are approximate page counts for the main body (introduction to conclusion). Front and back matter (abstract, acknowledgments, appendices, etc.) are not counted.
+
+| Thesis type | Main body |
+|-------------|-----------|
+| Lab Project | 20–30 pages |
+| Bachelor's thesis | 30–50 pages |
+| Master's thesis | 50–80 pages |
+
+Larger deviations from these ranges should be discussed with your supervisor.
+
+---
+
+## Downloading the compiled PDFs
+
+Every push to the `main` branch triggers an automated build. To download the latest compiled PDF of the template:
+
+1. Go to the **Actions** tab of the repository.
+2. Click the most recent successful workflow run.
+3. Scroll to **Artifacts** and download `compiled-pdfs`.
+
+---
+
+## Notes on logos and university branding
+
+The logo files in `images/logos/` (`mrm.png`, `uni_a.png`) are the property of the University of Augsburg and are subject to the university's branding guidelines. They are included here solely for use by students and staff of the University of Augsburg when preparing official thesis documents. They are **not** covered by the license that applies to the template code.
+

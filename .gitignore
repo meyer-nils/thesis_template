@@ -19,4 +19,18 @@
 *.toc
 *.bcf
 *.run.xml
+*.synctex.gz
+*.lof
+*.lot
+*.idx
+*.ilg
+*.ind
 *.pdf
+
+# Editor and OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
