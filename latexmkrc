@@ -7,6 +7,9 @@
 # The post-processing steps below (qpdf linearisation) are Overleaf-specific
 # and are safely skipped when qpdf is not installed on a local machine.
 
+# Tell latexmk (and Overleaf) which file is the default entry point.
+@default_files = ('thesis.tex');
+
 # Settings
 $xdvipdfmx = "xdvipdfmx -z 6 -i dvipdfmx-unsafe.cfg -o %D %O %S";
 
