@@ -30,11 +30,11 @@
 \parindent0mm
 \parskip1mm
 \fboxrule0.1mm
-\fboxsep1mm				
-\renewcommand{\baselinestretch}{1.2}
+\fboxsep1mm
+\linespread{1.3}
 
 % Math
-\usepackage{amsmath}
+\usepackage{mathtools}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{bbm}
@@ -49,10 +49,12 @@
 % Graphics
 \usepackage{graphicx}
 \usepackage{tikz}
-\usepackage{here}
-\usepackage{pgfplots}
-\pgfplotsset{compat=1.18} 
+\usepackage{float}
 \usepackage[absolute]{textpos}
+% Uncomment pgfplots if you create plots directly in LaTeX (e.g. with \addplot).
+% Most students include figures as image files and do not need it.
+% \usepackage{pgfplots}
+% \pgfplotsset{compat=1.18}
 
 % Tables
 \usepackage{tabularx}
@@ -61,9 +63,10 @@
 \usepackage{makecell}
 \setcellgapes{4pt}
 
-% Verbatims 
+% Verbatims — used for the example chapter. If you remove that chapter and do not
+% need verbatim code blocks yourself, you can comment these out.
 \usepackage{fancyvrb}
-\usepackage{verbdef} 
+\usepackage{verbdef}
 
 % Acronyms
 \usepackage[printonlyused]{acronym}
@@ -180,20 +183,12 @@
 \renewcommand{\doitext}{DOI: }
 
 
-\usepackage{mwe}
-\usepackage{graphbox}
-\usepackage{mathtools}
-\usepackage{tikz-3dplot}
-\usepackage{tkz-euclide}
-\def\centerarc[#1](#2)(#3:#4:#5){	\draw[#1] ($(#2) + ({#5*cos(#3)},{#5*sin(#3)})$) arc (#3:#4:#5);}
-\usepackage{multirow}
-\usepackage[normalem]{ulem}
-\usepackage{booktabs}
+\usepackage{multirow}         % multi-row cells in tables
+\usepackage[normalem]{ulem}   % \uline, \sout etc. (normalem keeps \emph italic)
+\usepackage{booktabs}         % professional table rules (\toprule, \midrule, \bottomrule)
 
-\usepackage{listings}
-\usepackage{setspace}
-\linespread{1.3}
 
-\usepackage{threeparttable,booktabs}
-\usepackage[section]{placeins}
-\usepackage{longtable}
+\usepackage{threeparttable}   % tables with footnotes
+
+ \usepackage[section]{placeins}
+
