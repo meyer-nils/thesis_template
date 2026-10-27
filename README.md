@@ -98,5 +98,5 @@ Every push to `main` automatically compiles the template and attaches the PDFs t
 
 ## Notes on logos and university branding
 
-The logo files in `images/logos/` (`mrm.png`, `uni_a.png`) are the property of the University of Augsburg and are subject to the university's branding guidelines. They are included here solely for use by students and staff of the University of Augsburg when preparing official thesis documents. They are **not** covered by the license that applies to the template code.
+The logo files in `images/logos/` (`mrm.png`, `mrm_mark.png`, `uni_a.png`) are the property of the University of Augsburg and are subject to the university's branding guidelines. They are included here solely for use by students and staff of the University of Augsburg when preparing official thesis documents. They are **not** covered by the license that applies to the template code.
 
