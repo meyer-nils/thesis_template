@@ -194,5 +194,6 @@
 
 % Apply the document language chosen in metadata.tex (\ThesisLanguage).
 % This must come last so all packages are loaded before the language is activated.
-\AtBeginDocument{\selectlanguage{\ThesisLanguage}}
+% \frenchspacing (single space after full stops) is set afterwards, as babel may reset it.
+\AtBeginDocument{\selectlanguage{\ThesisLanguage}\frenchspacing}
 
